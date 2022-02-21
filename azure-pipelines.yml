@@ -41,12 +41,9 @@ stages:
     - task: AzureRmWebAppDeployment@4
       inputs:
         ConnectionType: 'AzureRM'
-        azureSubscription: '46e3c00a-054d-4c1b-8c12-08abdbbbebf3'
+        azureSubscription: 'Pay-As-You-Go(1)(46e3c00a-054d-4c1b-8c12-08abdbbbebf3)'
         appType: 'webAppContainer'
         WebAppName: 'nginxapp12'
-        deployToSlotOrASE: true
-        ResourceGroupName: 'nginx'
-        SlotName: 'production'
         DockerNamespace: 'mitun.azurecr.io'
         DockerRepository: 'hemadockersamplenginx'
     
