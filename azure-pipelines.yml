@@ -37,3 +37,13 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+
+    - task: AzureRmWebAppDeployment@4
+      inputs:
+        ConnectionType: 'AzureRM'
+        azureSubscription: 'Pay-As-You-Go(46e3c00a-054d-4c1b-8c12-08abdbbbebf3)'
+        appType: 'webAppContainer'
+        WebAppName: 'mitunappservice'
+        DockerNamespace: 'mitun.azurecr.io'
+        DockerRepository: 'mitunmbjdockersamplenginx'
+        DockerImageTag: '$(Build.BuildId)'
