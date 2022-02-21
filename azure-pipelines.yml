@@ -11,7 +11,7 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'f2fe28ca-eda1-4def-bbcf-a69a6515b521'
-  imageRepository: 'hemadockersamplenginx'
+  imageRepository: 'mitundockersamplenginx'
   containerRegistry: 'mitun.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
@@ -48,5 +48,5 @@ stages:
         ResourceGroupName: 'nginx'
         SlotName: 'production'
         DockerNamespace: 'mitun.azurecr.io'
-        DockerRepository: 'hemadockersamplenginx'
+        DockerRepository: 'mitundockersamplenginx'
     
